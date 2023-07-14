@@ -217,20 +217,24 @@ h4 {
     transform: scale(1.05);
 }
 
-.project:before {
+.project:before,.announcment:before,.announcment-bottom:before {
     content: '';
-    background-color: var(--art-bg);
+    background-color: #d8b4fe;
     position: absolute;
     left: 0;
-    bottom: 3px;
+    bottom: 5px;
     width: 100%;
-    height: 8px;
+    height: 1em;
     z-index: -1;
-    transition: all .5s ease-in-out;
-    color: white;
+    transition: all .4s ease-in-out;
+border-radius: 20px;    
+}
+.announcment:hover,.announcment-bottom:hover{
+    transform: scale(1.05);
+    border-radius: 20px;
 }
 
-.project:hover::before {
+.project:hover::before,.announcment:hover::before,.announcment-bottom:hover::before {
     bottom: 0;
     height: 100%;
 }
@@ -270,9 +274,8 @@ h4 {
 .announcments {
     border-radius: 15px;
     background-color: var(--main-bg-color);
-    padding: 1rem;
     margin: 1rem;
-    margin-top: 0%;
+    padding: 0.5rem;
 }
 
 .announcment {
@@ -280,12 +283,18 @@ h4 {
     width: auto;
     border-bottom-color: #4a044e;
     padding: 1rem;
+    border-radius: 30px;
+    margin: 1rem;
 
 }
 
 .announcment-bottom {
-
+    border: solid 2px var(--main-bg-color);
+    width: auto;
+    border-bottom-color: #4a044e;
     padding: 1rem;
+    border-radius: 30px;
+    margin: 1rem;
 }
 
 
@@ -304,6 +313,11 @@ h4 {
     grid-template-rows: 2rem auto;
     grid-auto-flow: column;
 
+}
+.trending-profile:hover{
+    transform: scale(1.05);
+    border-color: #a21caf;
+    border-width: 5px;
 }
 
 .trending-pic {
